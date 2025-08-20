@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask the Learning AI</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
+        textarea { width: 100%; min-height: 80px; }
+        input[type="submit"] { padding: 10px 15px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Ask the Self-Learning AI</h1>
+    <p>The AI is continuously learning in the background. Ask it a question!</p>
+    <form action="/ask" method="post">
+        <textarea name="question" placeholder="e.g., What are neural networks?"></textarea>
+        <br><br>
+        <input type="submit" value="Get Answer">
+    </form>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+              </html>
+              
